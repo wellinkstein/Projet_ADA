@@ -63,7 +63,7 @@ package body dates is
  			when 4|6|9|11=>
  				if d.jour > 30 then
  					fait := false;
- 				else fait := false;
+ 				else fait := true;
  				end if;
  			when 2 => 
  				if d.jour > 29 then
@@ -71,6 +71,7 @@ package body dates is
  				elsif not verification_date_bisextile(d) then -- vérification si la date ne correspond pas à une année bisextile
  					if d.jour > 28 then
  						fait := false;
+					else fait := true;
  					end if;
  				else
  					fait := true;
