@@ -8,11 +8,8 @@ package body dates is
 		if ((d.annee mod 4=0) and (d.annee mod 100/=0)) or (d.annee mod 400=0) then
 			put("Annee bisextile"); --un peu de verbose pour faire plaisir à Annie
 			new_line;
-			if d.mois = 2 and then d.jour>28 then
-				return false;
-			else return true;
-			end if;
-		else return true;
+			return true;
+		else return false;
 		end if;
 	end verification_date_bisextile;
 
@@ -57,13 +54,29 @@ package body dates is
  			end;
  		end loop;
  		if verification_date_bisextile(d) then
- 			new_line;
- 			put("Date correcte"); new_line;
  			fait := true;
- 		else new_line;
- 			put("Date incorrecte"); new_line;
+ 		else
  			fait := false;
  		end if;
+
+ 		case d.mois is
+ 			when 4|6|9|11=>
+ 				if d.jour > 30 then
+ 					fait := false;
+ 				else fait := false;
+ 				end if;
+ 			when 2 => 
+ 				if d.jour > 29 then
+ 					fait := false;
+ 				elsif not verification_date_bisextile(d) then -- vérification si la date ne correspond pas à une année bisextile
+ 					if d.jour > 28 then
+ 						fait := false;
+ 					end if;
+ 				else
+ 					fait := true;
+ 				end if;
+ 			when others => fait := true;
+ 		end case;
  	end saisie_date;
       
 end dates;
