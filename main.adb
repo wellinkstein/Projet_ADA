@@ -1,12 +1,13 @@
-with Ada.Text_Io,Ada.Integer_Text_Io,Ada.Float_Text_Io,dates,piles_adh,tableaux,fichiers,sem_j_cren,ABR_adher,jour_suiv;
-use Ada.Text_Io,Ada.Integer_Text_Io,Ada.Float_Text_Io,dates,piles_adh,tableaux,fichiers,sem_j_cren,ABR_adher,jour_suiv;
+with Ada.Text_Io,Ada.Integer_Text_Io,dates,gestion_pile,declaration_adherent;
+use Ada.Text_Io,Ada.Integer_Text_Io,dates,gestion_pile,declaration_adherent;
 
 
 procedure Main is 
-   
+
+	PteurPileA : T_PteurPileAdherents;
+
 begin
-   
-   Test(Test_var);
+	ajout_adherent(PteurPileA);
    
 end Main;
 

@@ -1,7 +1,14 @@
-with Ada.Text_Io,Ada.Integer_Text_Io,Ada.Float_Text_Io;
-use Ada.Text_Io,Ada.Integer_Text_Io,Ada.Float_Text_Io;
+package dates is
+subtype intervale_jour is integer range 1..31;
+subtype intervale_mois is integer range 1..12;
 
-package piles_adh is 
-   
-      
-end piles_adh;
+	Type T_Date is record
+		jour : intervale_jour;
+		mois : intervale_mois;
+		annee : positive;
+	end record;
+
+    Function verification_date_bisextile (d : T_Date) return boolean;
+    Procedure saisie_date (d : out T_Date; fait : out boolean);
+
+end dates;

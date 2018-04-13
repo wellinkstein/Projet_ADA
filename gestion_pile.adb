@@ -8,7 +8,6 @@ Procedure saisie_mot (s : out declaration_adherent.mot) is
 begin
 	loop
 		begin
-		put ("Saisie prénom : ");
 		get_line(s,k);
 		exit;
 		exception
@@ -20,10 +19,13 @@ begin
 end saisie_mot;
 
 
-Procedure ajout_adherent (InfoAdherent : out declaration_adherent.T_Adherent) is
+Procedure ajout_adherent (Pteur : in out T_PteurPileAdherents) is
 	s : string(1..14);
 	act : declaration_adherent.T_Activite;
 	k : integer;
+	correct : boolean := false;
+	date_adherent : dates.T_Date;
+	InfoAdherent : declaration_adherent.T_Adherent;
 begin
 	new_line;
 	put ("== Procedure d'inscription=="); new_line; new_line;
@@ -33,21 +35,17 @@ begin
 	put ("Saisie nom : ");
 	saisie_mot(InfoAdherent.nom);
 	new_line;
-	put ("Saisie date de naissance (JJ/MM/AAAA) : ");
+
+	put ("Saisie date de naissance (JJ/MM/AAAA) : "); new_line;
+
 	loop
-		begin
-			get(InfoAdherent.DateNaissance.jour); 
-			get(InfoAdherent.DateNaissance.mois); 
-			get(InfoAdherent.DateNaissance.annee); 
-			skip_line;
-			exit;
-			exception
-				when constraint_error=>skip_line; put("Erreur, recommencer");
-				new_line;
-				when data_error=>skip_line; put("Erreur, recommencer");
-				new_line;
-		end;
+		dates.saisie_date(date_adherent,correct);
+		exit when correct=true;
+		new_line;
+		put ("Erreur, recommencer la saisie de la date de naissance");
+		new_line;
 	end loop;
+
 	new_line;
 	put("Saisir votre activité, 'Fitness', 'Aqua', 'AquaEtFitness' : ");
 	loop
@@ -63,8 +61,11 @@ begin
 		end;
 	end loop;
 	InfoAdherent.TypeContrat:=Act;
+	Pteur := new T_CelluleAdherents'(InfoAdherent,Pteur);
+	new_line;
+	put ("Enregistrement effectué");
+	new_line;
+
 end ajout_adherent;
-
-
 
 end gestion_pile;

@@ -1,4 +1,4 @@
-With declaration_adherent;
+With declaration_adherent, dates;
 
 package gestion_pile is
 
@@ -10,6 +10,5 @@ Type T_CelluleAdherents is record
 end record;
 
 Procedure saisie_mot (s : out declaration_adherent.mot);
-Procedure ajout_adherent (InfoAdherent : out declaration_adherent.T_Adherent);
-
+Procedure ajout_adherent (Pteur : in out T_PteurPileAdherents);
 end gestion_pile;
