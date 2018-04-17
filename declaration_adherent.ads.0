@@ -15,14 +15,11 @@ Type T_Adherent is record
 	DateNaissance : dates.T_Date := (1,1,1);
 	NbSeances : integer := 0;
    Typecontrat : T_Activite;
-   --Benjamin
-	--PlaningSemaine1 : T_planning; de sem_j_cren.ads  
+	-- PlaningSemaine1 : T_planning; Benjamin
 	-- PlaningSemaine2 : T_planning;
       
+     
 end record;
-
---Benjamin T_Tabadherents is array(integer range <>)of T_Adherent;
-
 
 -- Type PlaningAdherent is record
 -- end record;
