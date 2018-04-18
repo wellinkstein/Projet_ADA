@@ -1,0 +1,166 @@
+WITH Ada.Text_IO, Ada.Integer_Text_IO, Ada.Characters;
+USE Ada.Text_IO, Ada.Integer_Text_IO, Ada.Characters;
+-- il faut ajouter les .ads utils ????????????????????????????????????????????????????????????????????????
+-- y'as pleins d'ads vide (:3)...?????????????????????????????????????????????????????????????????????????????????
+
+PROCEDURE MenuPrincipal IS
+
+   Choix1,
+   Choix2,
+   Choix3  : Character;
+BEGIN
+
+--   Remplissage_adherent(Tab??);
+
+   LOOP
+      Put_Line(
+         "---------------------------------------------------------------------------------------------");
+      New_Line;
+      Put_Line(
+         "       Bienvue dans le programme de gestion de votre club de sport");
+      New_Line;
+      Put_Line(
+         "---------------------------------------------------------------------------------------------");
+      New_Line(2);
+      Put_Line("que voulez vous faire ?");
+      New_Line;
+      Put_Line("   1 : Gerer les adherents");
+      Put_Line("   2 : Gerer les reservations");
+      Put_Line("   3 : Sauvegarde");
+      Put_Line("   4 : Quitter");
+      New_Line(2);
+      Get(Choix1);
+      Skip_Line;
+      CASE Choix1 IS
+         WHEN '1' =>
+            LOOP
+               Put_Line("************************");
+               New_Line;
+               Put_Line("     PARTIE ADHERENT");
+               New_Line;
+               Put_Line("************************");
+               New_Line(2);
+               Put_Line(" Que voulez vous faire ?");
+               New_Line;
+               Put_Line("   1 : Ajouter un adherent");
+               Put_Line("   2 : Chercher un adherent");
+               Put_Line("   3 : Afficher les fiches de tous des adherents");
+               Put_Line("   4 : Supprimer un adherent");
+               Put_Line("   5 : QUITTER");
+               New_Line;
+               Get(Choix2);
+               Skip_Line;
+               New_Line;
+               New_Line;
+
+               CASE Choix2 IS
+                  WHEN '5' =>
+                     EXIT;
+                  WHEN '1' =>
+                     Put_Line("*** Ajouter un adherent***");
+                     --ajout_adherent(P);
+                     Null;
+                  WHEN '2' =>
+                     Put_Line("*** Chercher un adherent***");
+                     Null;
+                  WHEN '3' =>
+                     Put_Line("*** Afficher les fiches de tous des adherents ***");
+                     New_Line;
+                     Null;
+                  WHEN '4' =>
+                     Put_Line("*** Supprimer un adherent ***");
+                     New_Line;
+                     Null;
+                  WHEN OTHERS =>
+                     Put_Line("Choix inconnu, recommencer");
+               END CASE;
+            END LOOP;
+         WHEN '2' =>
+            LOOP
+               Put_Line("************************");
+               New_Line;
+               Put_Line("   PARTIE RESERVATION");
+               New_Line;
+               Put_Line("************************");
+               New_Line(2);
+               Put_Line(" Que voulez vous faire ?");
+               New_Line;
+               Put_Line("   1 : Reserver un creneau pour un adherent");
+               Put_Line("   2 : Annuler un creneau d'un adherent");
+               Put_Line("   3 : Afficher les adherents d'un creneau donne");
+               Put_Line("   4 : Mettre a jour la date");-----------------------------------sans renouvellement ???????????????????
+               Put_Line("   5 : QUITTER");
+               New_Line;
+               Get(Choix2);
+               Skip_Line;
+               New_Line(2);
+               CASE Choix2 IS
+                  WHEN '5' =>
+                     EXIT;
+                  WHEN '1' =>
+                     Put_Line("*** Reservation des creneaux ***");
+                     New_Line;
+                     Null;
+                  WHEN '2' =>
+                     Put_Line("*** Annulation des creneaux ***");
+                     New_line;
+                     Null;
+                  WHEN '3' =>
+                     Put_Line("*** Affichage des adherents d'un creneau ***");
+                     New_Line;
+                     Null;
+                  WHEN '4' =>
+                     Put_Line("*** Mise a jour de la date ***");
+                     New_Line;
+                     Null;
+                  WHEN OTHERS =>
+                     Put_Line("Choix inconnu, recommencer");
+               END CASE;
+            END LOOP;
+         WHEN '3' =>
+            Put_Line("************************");
+            New_Line;
+            Put_Line("    PARTIE ARCHIVE ");
+            New_Line;
+            Put_Line("************************");
+            New_Line;
+            New_Line;
+            Put_Line(" Que voulez vous faire ?");
+            New_Line;
+            Put_Line("   1 : Visualisation de la sauvegarde");
+            Put_Line("   2 : QUITTER");
+            Get(Choix2);
+            Skip_Line;
+            New_Line;
+            New_Line;
+            LOOP
+               CASE Choix2 IS
+                  WHEN '2' =>
+                     EXIT;
+                  WHEN '1' =>
+                     Put_Line("*** ARCHIVE ***");
+                     --Lecture;
+                     New_Line;
+                  WHEN OTHERS =>
+                     Put_Line("Choix inconnu, recommencer");
+               END CASE;
+            END LOOP;
+         WHEN '4' =>
+            Put_Line(
+               "Etes-vous sur de vouloir quitter le menu ? Oui(O) / Non(N) :");
+            Get(Choix3);
+            Skip_Line;
+            CASE Choix3 IS
+               WHEN 'O' =>
+                  EXIT ;
+               WHEN 'N' =>
+                  NULL;
+               WHEN OTHERS =>
+                  Put_Line("Choix inconnu, recommencer");
+            END CASE;
+         WHEN OTHERS =>
+            Put_Line("Choix inconnu, recommencer");
+      END CASE;
+   END LOOP;
+END MenuPrincipal;
+
