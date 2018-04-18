@@ -6,7 +6,7 @@ USE Ada.Text_IO;
 package body Fichiers is
    
    procedure Create_Tab_Adherents(Tete:T_Pteurpileadherents;A:in out T_Tableau_Adherents)is
-   tmp:T_Pteurpileadherents:=Tete;compteur:integer:=1;
+   tmp:T_Pteurpileadherents:=Tete;compteur:=1;
    begin
       while tmp /= null loop
         A(Compteur):= Tmp.Adherent;
@@ -16,10 +16,10 @@ package body Fichiers is
    end Create_Tab_Adherents;
    
 
-  procedure Recup_Pile_Adherents(Tete:in out T_Pteurpileadherents;A:in out T_Tableau_Adherents)is
+  procedure Recup_Pile_Adherents(Tete:T_Pteurpileadherents;A:in out T_Tableau_Adherents)is
    compteur:integer:=1;
    begin
-      while A(compteur).DateNaissance.Annee /= 1 loop
+      while A(Compteur)/=null then
          Tete:=new T_Celluleadherents'(A(Compteur),Tete);
          Compteur:=Compteur+1;
       end loop;
@@ -35,7 +35,7 @@ package body Fichiers is
       F:Fichier_Adherents.File_Type;
    BEGIN
       begin
-         Create_Tab_Adherents(tete_pile,Tab_adh);
+         
          Open(F,Out_File,"save_Adherents");--ouvrir le fichier s'il est existe
       EXCEPTION
          WHEN OTHERS =>Create(F,Name=>"save_Adherents");--si non on creer un nouveau fichier
@@ -50,7 +50,6 @@ package body Fichiers is
       Open(F,In_File,"save_editeur");
       Read(F,Adherents);
       Close(F);
-      Recup_Pile_Adherents(tete_pile,Tab_Adh);
    END Restore_Adherents;
 
    

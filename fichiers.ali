@@ -1,0 +1,126 @@
+V "GNAT Lib v3.15"
+A -gnatwu
+A -g
+A -gnato
+P
+R nnvvnnnvnnnnnvvvvvvnnvvnnnnnnnnnnvnnnnnnnnnnnnnnvvnn
+
+U fichiers%b		fichiers.adb		13bdf7a0 NE PK
+W ada%s			ada.ads			ada.ali
+W ada.sequential_io%s
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+
+U fichiers%s		fichiers.ads		1991cfe0 EE PK
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+W ada.sequential_io%s
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W declaration_adherent%s  declaration_adherent.ads  declaration_adherent.ali
+W gestion_pile%s	gestion_pile.adb	gestion_pile.ali
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c_streams%s  i-cstrea.adb		i-cstrea.ali
+W system%s		system.ads		system.ali
+W system.arith_64%s	s-arit64.adb		s-arit64.ali
+W system.file_control_block%s  s-ficobl.ads	s-ficobl.ali
+W system.file_io%s	s-fileio.adb		s-fileio.ali
+W system.sequential_io%s  s-sequio.adb		s-sequio.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+W unchecked_conversion%s
+
+D ada.ads		19941113010444 a0108083
+D a-except.ads		20020130123438 a9cbab76
+D a-finali.ads		19971119123820 d4be2e87
+D a-filico.ads		19970304235844 83058640
+D a-flteio.ads		19970318042320 35f82779
+D a-inteio.ads		19941113010258 58c81565
+D a-ioexce.ads		19941113042010 d52e128a
+D a-sequio.ads		19971119123836 545d9cf1
+D a-sequio.adb		19990814103100 dd52a300
+D a-stream.ads		20011114205110 dbe6acb4
+D a-tags.ads		20010330192918 bc792b69
+D a-textio.ads		20000826115840 98d7a37c
+D a-tiflio.ads		19971119123944 661a85c9
+D a-tiinio.ads		19971119123950 d2c49634
+D dates.ads		20180418214814 01bca2ef
+D declaration_adherent.ads  20180418221118 a86493eb
+D fichiers.ads		20180418232010 06623cdf
+D fichiers.adb		20180418232052 d955f4f2
+D gestion_pile.ads	20180418214814 162d6d45
+D interfac.ads		19990427033020 6e859da6
+D i-cstrea.ads		20020108155218 4c49c040
+D system.ads		20020119084456 2f3d0cfb
+D s-arit64.ads		19961219222852 be646b3c
+D s-exctab.ads		19990919095916 52f2ffc0
+D s-ficobl.ads		20001027210342 14416104
+D s-fileio.ads		20010807144312 125e5cb8
+D s-finimp.ads		19980220224008 ef65ab1e
+D s-finroo.ads		20001114102810 7e5e077b
+D s-parame.ads		20011130030724 315d7d16
+D s-secsta.ads		19990723142132 e384df23
+D s-sequio.ads		19960127201956 6f825cc5
+D s-soflin.ads		20011129160718 14059e84
+D s-stache.ads		20010607103152 8fc58eaa
+D s-stalib.ads		20010618021954 76713122
+D s-stoele.ads		19980907140906 c6bef0ad
+D s-stratt.ads		20001228150446 9fdf8f81
+D s-unstyp.ads		20011122141014 05ad3732
+D unchconv.ads		19960730024842 1b7a14c5
+X 1 ada.ads
+18K9*Ada 21e8 17|1r6 1r18 1r38 1r56 2r5 2r17 2r37 13r34 18|1r6 1r18 2r5
+X 5 a-flteio.ads
+22K13*Float_Text_IO 17|1r42 2r41
+X 6 a-inteio.ads
+20K13*Integer_Text_IO 17|1r22 2r21
+X 8 a-sequio.ads
+47k13*Sequential_IO 128e22 17|1r60 13r38 18|1r22
+49P9*File_Type 18|35r27[18|13] 48r27[18|13]
+51n23*In_File 18|50r14[18|13]
+51n32*Out_File 18|39r17[18|13]
+66U14*Create 18|41r24[18|13]
+69s7 Name{string} 18|41r33[18|13]
+72U14*Open 18|39r10[18|13] 50r7[18|13]
+78U14*Close 18|44r7[18|13] 52r7[18|13]
+93U14*Read 18|51r7[18|13]
+94U14*Write 18|43r7[18|13]
+X 12 a-textio.ads
+51K13*Text_IO 442e16 17|1r10 2r9 18|1r10 2r9
+X 15 dates.ads
+9i17*annee{positive} 18|22r39
+X 16 declaration_adherent.ads
+2K9*declaration_adherent 76e25 17|1r74 2r55
+4i1*N{integer} 17|9r55
+23R6*T_Adherent 33e11 17|9r60
+26r9*DateNaissance 18|22r25
+X 17 fichiers.ads
+4K9*Fichiers 21l5 21e13 18|6b14 60l5 60t13
+9A9*T_Tableau_Adherents 10r12 13r52 15r40 16r43 18|8r70 19r76 34r39 47r46
+10a4*Tab_Adh{9A9} 18|38m41 53m38
+11p4*tete_pile{19|6P7} 18|38r31 53m28
+13K9*Fichier_Adherents 14r5 18|35r9 48r9
+15U11*Save_Adherents 18|34b14 45l8 45t22
+15a26 Adherents{9A9} 18|34b29 43r15
+16U11*Restore_Adherents 18|47b14 54l8 54t25
+16a29 Adherents{9A9} 18|47b32 51m14
+X 18 fichiers.adb
+8U14 Create_Tab_Adherents 16l8 16t28 38r10
+8p35 Tete{19|6P7} 9r30
+8a61 A{17|9A9} 12m9
+9p4 tmp{19|6P7} 11r13 12r23 14m10 14r15
+9i35 compteur{integer} 12r11 13m10 13r22
+19U13 Recup_Pile_Adherents 27l9 27t29 53r7
+19p34 Tete{19|6P7} 23m10 23r52
+19a67 A{17|9A9} 22r13 23r40
+20i4 compteur{integer} 22r15 23r42 24m10 24r20
+35P7 F{8|49P9} 39m15 41m31 43r13 44m13
+48P7 F{8|49P9} 50m12 51r12 52m13
+X 19 gestion_pile.ads
+3K9*gestion_pile 17|1r95 2r76 19|16e17
+5R6*T_CelluleAdherents 18|23r20
+6P7*T_PteurPileAdherents 17|11r14 18|8r40 9r8 19r46
+8r9*Adherent{16|23R6} 18|12r27
+9p9*suiv{6P7} 18|14r19
+

@@ -1,0 +1,13 @@
+with Ada.Text_Io,Ada.Integer_Text_Io,Ada.Float_Text_Io;
+use Ada.Text_Io,Ada.Integer_Text_Io,Ada.Float_Text_Io;
+
+package Fichiers is 
+   
+
+PACKAGE Fichier_Adherents IS NEW Ada.Sequential_IO(T_tableau_Adherents);
+use Fichier_Adherents;
+PROCEDURE Save_Adherents(Editeur: IN T_Tablo_editeur);
+PROCEDURE Restore_Adherents(Editeur:OUT T_Tablo_Editeur);
+   
+      
+end fichiers;
