@@ -5,7 +5,7 @@ N : constant integer := 3;
 P : constant integer := 4;
 
 subtype mot is string(1..20);
-   type T_Activite is (Aqua, Fitness, Aquaetfitness);
+   type T_Activite is (Aqua, Fitness, AquaEtFitness);
    
 
 
@@ -13,6 +13,7 @@ Type T_Adherent is record
 	Nom : mot := (others=>' ');
 	Prenom : mot := (others=>' ');
 	DateNaissance : dates.T_Date := (1,1,1);
+	DateDerniereAdhesion : dates.T_Date := (1,1,1);
 	NbSeances : integer := 0;
    Typecontrat : T_Activite;
    --Benjamin
