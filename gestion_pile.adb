@@ -23,7 +23,7 @@ begin
 	if Pteur = null then inscrit := false ; meme_contrat := false;
 	else if Pteur.adherent.nom=infos.nom and then Pteur.adherent.prenom=infos.prenom then
 			inscrit := true;
-			if declaration_adherent.T_Activite'image(Pteur.adherent.Typecontrat)=declaration_adherent.T_Activite'image(infos.Typecontrat) then
+			if declaration_adherent.T_Contrat'image(Pteur.adherent.Typecontrat)=declaration_adherent.T_Contrat'image(infos.Typecontrat) then
 			meme_contrat:=true;
 			else meme_contrat:=false;
 			end if;
@@ -45,7 +45,7 @@ end modification_contrat;
 
 Procedure ajout_adherent (Pteur : in out T_PteurPileAdherents) is
 	s : string(1..14);
-	act : declaration_adherent.T_Activite;
+	act : declaration_adherent.T_Contrat;
 	k : integer;
 	correct : boolean := false;
 	date_adherent : dates.T_Date;
@@ -77,7 +77,7 @@ begin
 	loop
 		begin
 			get_line(s,k);
-			act:=declaration_adherent.T_Activite'value(s(1..k));
+			act:=declaration_adherent.T_Contrat'value(s(1..k));
 			exit;
 			exception
 				when constraint_error=>put("Erreur, recommencer");

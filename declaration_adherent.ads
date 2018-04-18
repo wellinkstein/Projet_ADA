@@ -5,7 +5,8 @@ N : constant integer := 3;
 P : constant integer := 4;
 
 subtype mot is string(1..20);
-   type T_Activite is (Aqua, Fitness, AquaEtFitness);
+   type T_Contrat is (Aqua, Fitness, Aquaetfitness);
+   type T_Activite is (Aqua, Fitness);
    
  
   Type T_Creneau_Adh is record 
@@ -25,7 +26,7 @@ Type T_Adherent is record
 	DateNaissance : dates.T_Date := (1,1,1);
 	DateDerniereAdhesion : dates.T_Date := (1,1,1);
 	NbSeances : integer := 0;
-   Typecontrat : T_Activite;
+   Typecontrat : T_Contrat;
      PlaningSemaine1 : T_Planning_Adh; 
      PlaningSemaine2 : T_Planning_Adh;
       

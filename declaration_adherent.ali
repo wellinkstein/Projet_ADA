@@ -1,54 +1,57 @@
 V "GNAT Lib v3.15"
 A -gnatwu
-A -g
 A -gnato
-A -gnatc
-P NO
-R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+A -g
+P
+R nnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 
-U declaration_adherent%s  declaration_adherent.ads  33d0371f EE PK IL KM
+U declaration_adherent%s  declaration_adherent.ads  a9d83104 NE PK IL KM
 W dates%s		dates.adb		dates.ali
 
 D dates.ads		20180418214814 01bca2ef
-D declaration_adherent.ads  20180418220638 326c95f0
+D declaration_adherent.ads  20180418221118 a86493eb
+D system.ads		20020119084456 2f3d0cfb
 X 1 dates.ads
-1K9*dates 17e10 2|1r6 25r25 26r32
-6R14*T_Date 10e19 2|25r31 26r38
+1K9*dates 17e10 2|1r6 26r25 27r32
+6R14*T_Date 10e19 2|26r31 27r38
 X 2 declaration_adherent.ads
-2K9*declaration_adherent 75l5 75e25
-4i1*N{integer} 41r36 48r36
+2K9*declaration_adherent 76l5 76e25
+4i1*N{integer} 42r36 49r36
 5i1*P{integer}
-7A9*mot{string} 23r15 24r18
-8E9*T_Activite 8e53 12r14 28r18
-8n24*Aqua{8E9}
-8n30*Fitness{8E9}
-8n39*AquaEtFitness{8E9}
-11R8*T_Creneau_Adh 14e14 16r48
-12e5*Activite{8E9}
-13b5*Present{boolean}
-16A6*T_Jour_adh 17r52
-17A6*T_Planning_Adh 29r24 30r24
-22R6*T_Adherent 32e11 35r53
-23a9*Nom{7A9}
-24a9*Prenom{7A9}
-25r9*DateNaissance{1|6R14}
-26r9*DateDerniereAdhesion{1|6R14}
-27i9*NbSeances{integer}
-28e4*Typecontrat{8E9}
-29a6*PlaningSemaine1{17A6}
-30a6*PlaningSemaine2{17A6}
-35A9*T_Tabadherents 41r18 48r18
-40R10*T_Creneau_Aqua_gen 44e14 55r12
-41a7*Tabinscrit{35A9}
-42i7*Taille{integer}
-43b7*Open{boolean}
-47R9*T_Creneau_Fitness_gen 51e14 56r15
-48a7*Tabinscrit{35A9}
-49i7*Taille{integer}
-50b7*Open{boolean}
-54R9*T_Creneau_gen 57e14 59r51
-55r7*Aqua{40R10}
-56r7*Fitness{47R9}
-59A9*T_Jour_Gen 60r59
-60A9*T_Planning_General
+7A9*mot{string} 24r15 25r18
+8E9*T_Contrat 8e52 29r18
+8n23*Aqua{8E9}
+8n29*Fitness{8E9}
+8n38*Aquaetfitness{8E9}
+9E9*T_Activite 9e38 13r14
+9n24*Aqua{9E9}
+9n30*Fitness{9E9}
+12R8*T_Creneau_Adh 15e14 17r48
+13e5*Activite{9E9}
+14b5*Present{boolean}
+17A6*T_Jour_adh 18r52
+18A6*T_Planning_Adh 30r24 31r24
+23R6*T_Adherent 33e11 36r53
+24a9*Nom{7A9}
+25a9*Prenom{7A9}
+26r9*DateNaissance{1|6R14}
+27r9*DateDerniereAdhesion{1|6R14}
+28i9*NbSeances{integer}
+29e4*Typecontrat{8E9}
+30a6*PlaningSemaine1{18A6}
+31a6*PlaningSemaine2{18A6}
+36A9*T_Tabadherents 42r18 49r18
+41R10*T_Creneau_Aqua_gen 45e14 56r12
+42a7*Tabinscrit{36A9}
+43i7*Taille{integer}
+44b7*Open{boolean}
+48R9*T_Creneau_Fitness_gen 52e14 57r15
+49a7*Tabinscrit{36A9}
+50i7*Taille{integer}
+51b7*Open{boolean}
+55R9*T_Creneau_gen 58e14 60r51
+56r7*Aqua{41R10}
+57r7*Fitness{48R9}
+60A9*T_Jour_Gen 61r59
+61A9*T_Planning_General
 
