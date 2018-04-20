@@ -1,3 +1,7 @@
+
+SUBTYPE Mot14 IS String (1..14);
+
+ --Saisie controle des activites
 PROCEDURE Saisie_activite (
          activite :    OUT T_Contrat ) IS
       S : Mot14;
