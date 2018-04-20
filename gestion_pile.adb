@@ -18,6 +18,22 @@ begin
 	end loop;
 end saisie_mot;
 
+PROCEDURE Saisie_activite (acti : out declaration_adherent.T_Contrat) is
+      s : Mot14;
+      k : Integer;
+   BEGIN
+      LOOP
+         BEGIN
+            Get_Line(S, K);
+            acti := declaration_adherent.T_Contrat'Value(s(1..k));
+            EXIT;
+         EXCEPTION
+            WHEN Constraint_Error =>
+               Put("Erreur de saisie, veuillez recommencer : ");
+         END;
+      END LOOP;
+   END Saisie_activite;
+
 Procedure deja_inscrit (infos : declaration_adherent.T_Adherent ; Pteur : T_PteurPileAdherents ; inscrit : out boolean ; meme_contrat : out boolean) is
 begin
 	if Pteur = null then inscrit := false ; meme_contrat := false;
@@ -44,9 +60,7 @@ end modification_contrat;
 
 
 Procedure ajout_adherent (Pteur : in out T_PteurPileAdherents) is
-	s : string(1..14);
 	act : declaration_adherent.T_Contrat;
-	k : integer;
 	correct : boolean := false;
 	date_adherent : dates.T_Date;
 	InfoAdherent : declaration_adherent.T_Adherent;
@@ -73,19 +87,9 @@ begin
 	end loop;
 
 	new_line;
+	Saisie_activite(act);
 	put("Saisir votre activité, 'Fitness', 'Aqua', 'AquaEtFitness' : ");
-	loop
-		begin
-			get_line(s,k);
-			act:=declaration_adherent.T_Contrat'value(s(1..k));
-			exit;
-			exception
-				when constraint_error=>put("Erreur, recommencer");
-				new_line;
-				when data_error=>put("Erreur, recommencer");
-				new_line;
-		end;
-	end loop;
+
 	InfoAdherent.TypeContrat:=Act;
 	InfoAdherent.DateDerniereAdhesion:=dates.date_jour;
 	deja_inscrit(InfoAdherent,Pteur,present_pile,contrat_identique);
