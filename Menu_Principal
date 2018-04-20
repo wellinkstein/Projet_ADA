@@ -4,7 +4,7 @@ USE Ada.Text_IO, Ada.Integer_Text_IO, Ada.Characters;
 -- y'as pleins d'ads vide (:3)...?????????????????????????????????????????????????????????????????????????????????
 
 PROCEDURE MenuPrincipal IS
-
+   A : T_Arbre_adh :
    Choix1,
    Choix2,
    Choix3  : Character;
@@ -45,8 +45,9 @@ BEGIN
                Put_Line("   1 : Ajouter un adherent");
                Put_Line("   2 : Chercher un adherent");
                Put_Line("   3 : Afficher les fiches de tous des adherents");
-               Put_Line("   4 : Supprimer un adherent");
-               Put_Line("   5 : QUITTER");
+               Put_Line("   4 : Affichage des adherent en mode prefixe");  
+               Put_Line("   5 : Supprimer un adherent");
+               Put_Line("   6 : QUITTER");
                New_Line;
                Get(Choix2);
                Skip_Line;
@@ -54,7 +55,7 @@ BEGIN
                New_Line;
 
                CASE Choix2 IS
-                  WHEN '5' =>
+                  WHEN '6' =>
                      EXIT;
                   WHEN '1' =>
                      Put_Line("*** Ajouter un adherent***");
@@ -68,6 +69,10 @@ BEGIN
                      New_Line;
                      Null;
                   WHEN '4' =>
+                     Put_Line("*** Affichage des adherents en mode prefixe ***");
+                     affich_Prefixe_ABR (A);
+                     New_Line;                     
+                  WHEN '5' =>
                      Put_Line("*** Supprimer un adherent ***");
                      New_Line;
                      Null;
